@@ -1,5 +1,8 @@
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   background-color: #f4f4f9;
   color: #333;
   padding: 2rem;
@@ -22,7 +25,7 @@ h1 {
   padding: 1rem;
   margin-bottom: 0.5rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -35,15 +38,14 @@ h1 {
   text-align: center;
 }
 
-.task--done::before {
-  content: "✅";
+.task-done::before {
+  content: '✅';
 }
 
-.task--cancelled::before {
-  content: "❌";
+.task-cancelled::before {
+  content: '❌';
 }
 
-.task--in-progress::before {
-  content: "⏳";
+.task-in-progress::before {
+  content: '⏳';
 }
-
