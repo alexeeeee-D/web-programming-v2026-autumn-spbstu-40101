@@ -1,6 +1,6 @@
 export function reverseWords(str) {
-    return str
+  return str
     .split(' ')
     .map((word) => word.split('').reverse().join(''))
-    .join(' ')
+    .join(' ');
 }
