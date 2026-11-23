@@ -44,6 +44,6 @@ export function findUsersAboveFriendCount(users, n) {
   return users.filter((user) => user.friendCount > n);
 }
 
-export function getUsersWithZeroFriends(users) {
+export function findUsersWithoutFriends(users) {
   return users.filter((user) => user.friendCount === 0);
 }
