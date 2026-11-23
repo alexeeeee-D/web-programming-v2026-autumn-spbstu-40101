@@ -29,8 +29,6 @@ function asyncDelay(ms = 300) {
 function render() {
   listElement.innerHTML = '';
 
-  console.log('Группировка по друзьям:', groupUsersByFriendsCount(users));
-
   users.forEach((user) => {
     const card = document.createElement('div');
     card.setAttribute('data-testid', 'entity-card');
@@ -66,8 +64,9 @@ function render() {
         const friendIdStr = prompt(
           `Введите ID друга, которого хотите удалить у ${user.name}:`,
         );
-        if (friendIdStr === null) return;
-
+        if (friendIdStr === null) {
+          return
+        }  
         const friendId = Number(friendIdStr);
         e.target.disabled = true;
 

@@ -20,7 +20,7 @@ export class User {
   }
 }
 
-export function groupUsersByFriendsCount(users) {
+export function groupUsersByFriendCount(users) {
   return users.reduce((acc, user) => {
     const count = user.friendCount;
     if (!acc[count]) {
@@ -48,7 +48,7 @@ export function getUsersWithCommonFriend(users, userId) {
   );
 }
 
-export function getUsersHaveMoreFriendsThan(users, count) {
+export function getUsersWithMoreFriendsThan(users, n) {
   return users.filter((user) => user.friendCount > n);
 }
 
