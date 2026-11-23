@@ -40,7 +40,7 @@ export function findUsersWithFriend(users, targetId) {
   return users.filter((user) => user.friends.includes(targetId));
 }
 
-export function getUsersWithMoreFriendsThan(users, n) {
+export function findUsersAboveFriendCount(users, n) {
   return users.filter((user) => user.friendCount > n);
 }
 
