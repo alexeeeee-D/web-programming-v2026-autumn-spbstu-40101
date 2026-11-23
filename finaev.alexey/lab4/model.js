@@ -36,16 +36,8 @@ export function getUniqueFriends(users) {
   return [...new Set(allFriends)];
 }
 
-export function findUsersWithFriend(users, userId) {
-  const targetUser = users.find((u) => u.id === userId);
-  if (!targetUser) {
-    return [];
-  }
-  return users.filter(
-    (u) =>
-      u.id !== u.userId &&
-      u.friends.some((friendId) => userId.friends.includes(friendId)),
-  );
+export function findUsersWithFriend(users, targetId) {
+  return users.filter((user) => user.friends.includes(targetId));
 }
 
 export function getUsersWithMoreFriendsThan(users, n) {
