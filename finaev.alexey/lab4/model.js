@@ -31,7 +31,7 @@ export function groupUsersByFriendCount(users) {
   }, {});
 }
 
-export function getListUniqueFriends(users) {
+export function getUniqueFriends(users) {
   const allFriends = users.flatMap((user) => user.friends);
   return [...new Set(allFriends)];
 }

@@ -1,4 +1,4 @@
-import {User, groupUsersByFriendsCount} from './model.js';
+import {User} from './model.js';
 
 const STORAGE_KEY = 'lab4_users';
 const listElement = document.querySelector('#entity-list');
@@ -65,8 +65,8 @@ function render() {
           `Введите ID друга, которого хотите удалить у ${user.name}:`,
         );
         if (friendIdStr === null) {
-          return
-        }  
+          return;
+        }
         const friendId = Number(friendIdStr);
         e.target.disabled = true;
 
