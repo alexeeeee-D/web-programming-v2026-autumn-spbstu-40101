@@ -36,7 +36,7 @@ export function getUniqueFriends(users) {
   return [...new Set(allFriends)];
 }
 
-export function getUsersWithCommonFriend(users, userId) {
+export function findUsersWithFriend(users, userId) {
   const targetUser = users.find((u) => u.id === userId);
   if (!targetUser) {
     return [];
